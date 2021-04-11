@@ -19,7 +19,11 @@ if you start your CFW using hekate, you should evaluate how you are launching CF
 payload=bootloader/payloads/fusee-primary.bin
 ```
 
-here is a helpful guide that my good friend birb wrote on how to launch fusee-primary using hekate and no need for special patches and configs: https://birbchirp.gitbook.io/switchguide/cfw-guides/atmosphere/optional-booting-atmosphere-with-hekate 
+here is a helpful guide on how to launch fusee-primary using hekate and no need for special patches and configs, see step 3 in Erista guides: 
+* Unpatched Erista (v1 Switch) using emunand: https://rentry.co/EristaEmuNAND
+* Unpatched Erista (v1 Switch) using sysnand: https://rentry.co/EristaSysNAND
+* Step 2 of the Mariko emunand guide: https://rentry.co/MarikoEmuNAND
+* Migration info in the Mariko sysnand guide: https://rentry.co/AtmosphereSysNAND
 
 ## hekate patches (fss0 hard mode)
 
