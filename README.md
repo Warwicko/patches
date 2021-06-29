@@ -1,6 +1,6 @@
 # patches
 
-innocent patches for the switch for using certain homebrews~
+innocent patches for the switch for using certain homebrews~like Tinfoil, see this FAQ if you get a red screen when using the hekate patches: https://rentry.org/SwitchFAQ
 
 ## how to patches
 
@@ -14,22 +14,22 @@ if you start your [Atmosphere CFW](https://github.com/Atmosphere-NX/Atmosphere) 
 
 if you start your CFW using hekate, you should evaluate how you are launching CFW before trying to patches. an easy way to launch CFW using hekate that is compatible with all homebrew apps is to just use hekate to launch fusee-primary! you can just use the same fusee patches, you don't need the special files further below. if you accidentally grabbed the special `hekate.zip` file in the [releases pages](https://github.com/ITotalJustice/patches/releases), that is ok! you can boot with fusee-primary using the `hekate.zip`, you just can't boot using the fss0 mode below using the `fusee.zip`. i tried to make it easy and foolproof unless you are using the hacker method in the next section. When I use hekate I just have a one line config entry to boot Atmosphere, after copying my latest `fusee-primary.bin` into the `/bootloader/paylods/` folder. 
 
-```
+```ini
 [Atmosphere CFW]
 payload=bootloader/payloads/fusee-primary.bin
 ```
 
 here is a helpful guide on how to launch fusee-primary using hekate and no need for special patches and configs, see step 3 in Erista guides: 
-* Unpatched Erista (v1 Switch) using emunand: https://rentry.co/EristaEmuNAND
-* Unpatched Erista (v1 Switch) using sysnand: https://rentry.co/EristaSysNAND
-* Step 2 of the Mariko emunand guide: https://rentry.co/MarikoEmuNAND
-* Migration info in the Mariko sysnand guide: https://rentry.co/AtmosphereSysNAND
+* Unpatched Erista (v1 Switch) using emunand: https://rentry.org/EristaEmuNAND
+* Unpatched Erista (v1 Switch) using sysnand: https://rentry.org/EristaSysNAND
+* Step 2 of the Mariko emunand guide: https://rentry.org/MarikoEmuNAND
+* Migration info in the Mariko sysnand guide: https://rentry.org/AtmosphereSysNAND
 
 ## hekate patches (fss0 hard mode)
 
 hello, i do not boot this way, you are probably some kind of a hacker if you are launching with special hekate configs. the important thing to know is that you need to actually grab the special [hekate.zip](https://github.com/ITotalJustice/patches/releases/latest/download/hekate.zip) and add some special hacking line `kip1patch=nosigchk` into your `hekate_ipl.ini` config file:
 
-```
+```ini
 [CFW - FSS0 SYS]
 fss0=atmosphere/fusee-secondary.bin
 kip1patch=nosigchk
