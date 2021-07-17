@@ -5,7 +5,7 @@ Innocent patches for the switch for using certain homebrews like Tinfoil, see th
 
 ## How to use patches
 
-Hello! Welcome to use these patches you need to download and extract the appropriate zip file from [releases page](https://github.com/ITotalJustice/patches/releases) to the root (highest directory) of your SD card! This should merge the `/atmosphere/` folder in the zip with the atmosphere folder on your SD card! You should not have an `/atmosphere/atmosphere/` folder, nor should you have an `/sd/`, `/fusee/`, or `/hekate/` folder on your SD card. 
+Hello! To use these patches you need to download and extract the appropriate zip file from [releases page](https://github.com/ITotalJustice/patches/releases) to the root (highest directory) of your SD card! This should merge the `/atmosphere/` folder in the zip with the atmosphere folder on your SD card! You should not have an `/atmosphere/atmosphere/` folder, nor should you have an `/sd/`, `/fusee/`, or `/hekate/` folder on your SD card. 
 
 ## Atmosphere Patches
 
