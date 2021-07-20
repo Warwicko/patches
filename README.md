@@ -1,5 +1,5 @@
 # Signature Patches
-Sinature patches are created to be used alongside Atmosphere for loading certain homebrew from the home menu.
+Signature patches are created to be used alongside Atmosphere for loading certain homebrew from the home menu.
 
 ## How to install Signature Patches
 
