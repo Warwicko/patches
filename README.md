@@ -1,34 +1,36 @@
+# Signature Patches
+Sinature patches are created to be used alongside Atmosphere for loading certain homebrew from the home menu.
 
-# Patches
+## How to install Signature Patches
 
-Innocent patches for the switch for using certain homebrews like Tinfoil, see this FAQ if you get a red screen when using the Hekate patches: https://rentry.org/SwitchFAQ
+1. [Download](https://github.com/ITotalJustice/patches/releases/latest) the latest release.
+    * If you use `fusee-primary.bin` to boot into atmosphere, download `fusee.zip`.
+    * If you use `fusee-secondary.bin` to boot into atmosphere, download `hekate.zip`.
+    * If you're unsure on which release to get then check your `hekate_ipl.ini` file located in your `/bootloader/` folder.
+        * If you have no such file, then get the `fusee.zip` release.
+        * If you see the following line `payload=bootloader/payloads/fusee-primary.bin` in your `hekate_ipl.ini` file, download `fusee.zip`.
+        * If you see the following line `fss0=atmosphere/fusee-secondary.bin` in your `hekate_ipl.ini` file, download `hekate.zip`.
+2. Unzip the release you've chosen into the root of your SD card. 
+    * Make sure to click **yes** for overwriting any files and merging folders.
+    * Make sure the `/atmosphere/` folder in the zip merges with the atmosphere folder on your SD card! You should not have an `/atmosphere/atmosphere/` folder, nor should you have an `/sd/`, `/fusee/`, or `/hekate/` folder on your SD card. 
 
-## How to use patches
+3. Boot into atmosphere, You should now be using signature patches.
 
-Hello! To use these patches you need to download and extract the appropriate zip file from [releases page](https://github.com/ITotalJustice/patches/releases) to the root (highest directory) of your SD card! This should merge the `/atmosphere/` folder in the zip with the atmosphere folder on your SD card! You should not have an `/atmosphere/atmosphere/` folder, nor should you have an `/sd/`, `/fusee/`, or `/hekate/` folder on your SD card. 
-
-## Atmosphere Patches
-
-If you start your [Atmosphere CFW](https://github.com/Atmosphere-NX/Atmosphere) by injecting the corresponding `fusee-primary.bin` RCM payload from whichever Atmosphere release you are using, you can simply use the [fusee.zip](https://github.com/ITotalJustice/patches/releases/latest/download/fusee.zip)
 
 ## Hekate Patches (EZ Mode)
 
-If you start your CFW using Hekate, you should evaluate how you are launching CFW before trying to patches. an easy way to launch CFW using Hekate that is compatible with all homebrew apps is to just use Hekate to launch fusee-primary! You can just use the same fusee patches, you don't need the special files further below. if you accidentally grabbed the special `hekate.zip` file in the [releases pages](https://github.com/ITotalJustice/patches/releases), that is ok! you can boot with fusee-primary using the `hekate.zip`, you just can't boot using the fss0 mode below using the `fusee.zip`. I tried to make it easy and foolproof unless you are using the hacker method in the next section. When I use Hekate I just have a one line config entry to boot Atmosphere, after copying my latest `fusee-primary.bin` into the `/bootloader/payloads/` folder. 
+If you wish to start your CFW with Hekate, we highly suggest chainloading fusee-primary, this is the best method to boot Atmosphere without directly pushing fusee-primary.bin.
 
+To chainload atmosphere place the [latest fusee-primary.bin](https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee-primary.bin) in `/bootloader/payloads/` then edit your hekate_ipl.ini to contain the following.
 ```ini
 [Atmosphere CFW]
 payload=bootloader/payloads/fusee-primary.bin
 ```
 
-Here is a helpful guide on how to launch fusee-primary using Hekate and no need for special patches and configs, see Step 3 in Erista guides: 
-* Step 3 of the Unpatched Erista (v1 Switch) EmuNAND guide: https://rentry.org/EristaEmuNAND
-* Step 3 of the Unpatched Erista (v1 Switch) SysNAND guide: https://rentry.org/EristaSysNAND
-* Step 2 of the Mariko EmuNAND guide: https://rentry.org/MarikoEmuNAND
-* Migration info in the Mariko SysNAND guide: https://rentry.org/AtmosphereSysNAND
 
 ## Hekate Patches (fss0 Hard Mode)
 
-I do not boot this way, you are probably some kind of a hacker if you are launching with special hekate configs. the important thing to know is that you need to actually grab the special [hekate.zip](https://github.com/ITotalJustice/patches/releases/latest/download/hekate.zip) and add some special hacking line `kip1patch=nosigchk` into your `hekate_ipl.ini` config file:
+I do not boot this way, and I suggest you don't either. The important thing to know about this method is that you need to grab the special [hekate.zip](https://github.com/ITotalJustice/patches/releases/latest/download/hekate.zip) and then edit your hekate_ipl.ini to contain `kip1patch=nosigchk`. Like this:
 
 ```ini
 [CFW - FSS0 SYS]
@@ -42,7 +44,7 @@ kip1patch=nosigchk
 emummcforce=1
 ```
 
-Congrats!! You now have patches~
+
 
 ----
 
@@ -54,4 +56,7 @@ Usual sources are:
 
 [Google](https://google.com)
 
-I do not create patches, this is just some helpful information for educational purposes. Ask a homebrew hacker if you need help patching but remember to always respect all intellectual property rights and all local/international laws. 
+----
+*Repo is mostly automated.*
+
+**This is just for educational purposes. Ask a homebrew developer if you need help with signature patches and remember to always respect all intellectual property rights and all local/international laws!**
