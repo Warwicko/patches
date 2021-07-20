@@ -14,14 +14,14 @@ Signature patches are created to be used alongside Atmosphere for loading certai
     * Make sure to click **yes** for overwriting any files and merging folders.
     * Make sure the `/atmosphere/` folder in the zip merges with the atmosphere folder on your SD card! You should not have an `/atmosphere/atmosphere/` folder, nor should you have an `/sd/`, `/fusee/`, or `/hekate/` folder on your SD card. 
 
-3. Boot into atmosphere, You should now be using signature patches.
+3. Boot into atmosphere. You should now be using signature patches.
 
 
 ## Hekate Patches (EZ Mode)
 
-If you wish to start your CFW with Hekate, we highly suggest chainloading fusee-primary, this is the best method to boot Atmosphere without directly pushing fusee-primary.bin.
+If you wish to start your CFW with Hekate, we highly suggest chainloading fusee-primary. This is the best method to boot Atmosphere without directly pushing fusee-primary.bin.
 
-To chainload atmosphere place the [latest fusee-primary.bin](https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee-primary.bin) in `/bootloader/payloads/` then edit your hekate_ipl.ini to contain the following.
+To chainload atmosphere place the [latest fusee-primary.bin](https://github.com/Atmosphere-NX/Atmosphere/releases/latest/download/fusee-primary.bin) in `/bootloader/payloads/` then edit your hekate_ipl.ini to contain the following,
 ```ini
 [Atmosphere CFW]
 payload=bootloader/payloads/fusee-primary.bin
