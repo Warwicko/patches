@@ -1,5 +1,7 @@
 # Signature Patches
-Signature patches are created to be used alongside Atmosphere for loading certain homebrew from the home menu.
+Signature patches are created to be used alongside Atmosphere for loading certain homebrew from the home menu. If you need assistance setting up Atmosphere, the recommended guide is https://rentry.org/SwitchHackingIsEasy
+
+Atmosphere 1.0.0 was recently released, and many important files were renamed. See https://rentry.org/MigrateToAtmosphere1_0_0 for assistance with migrating from previous Atmosphere versions. 
 
 ## How to install Signature Patches
 
